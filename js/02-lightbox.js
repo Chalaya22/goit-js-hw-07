@@ -23,16 +23,8 @@ galleryContainer.insertAdjacentHTML(
   renderListGalary(galleryItems)
 );
 
-galleryContainer.addEventListener("click", imgClickHandler);
-
-function imgClickHandler(evt) {
-  evt.preventDefault();
-  if (evt.target.nodeName !== "IMG") {
-    return;
-  }
-  const lightbox = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-    captionPosition: "bottom",
-  });
-}
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+  captionPosition: "bottom",
+});
